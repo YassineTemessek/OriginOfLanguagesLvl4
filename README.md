@@ -15,3 +15,7 @@ LV4 is the **theory + validation blueprint** for the broader project. It builds 
 If you want to run code and generate ranked leads, start with LV3:
 
 - `https://github.com/YassineTemessek/LinguisticComparison`
+
+## Recommended GitHub "About" description
+
+Theory + validation blueprint (LV4) for the Ancient Semitic Root Hypothesis, built on LV3 similarity scoring and ranked lead discovery.
