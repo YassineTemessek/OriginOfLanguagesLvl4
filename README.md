@@ -6,6 +6,11 @@ LV4 is the **theory + validation blueprint** for the broader project. It builds 
 
 - Main document (GitHub-friendly): `Master FoundationV3.2.md`
 
+## Repo Contents
+
+- `Master FoundationV3.2.md`: the main LV4 document (preferred).
+- `docs/`: supporting notes, templates, and an execution roadmap.
+
 ## How LV4 relates to LV3
 
 - LV3 (runnable pipeline): ingest + similarity scoring + ranked candidate discovery + QA reports.
@@ -18,3 +23,8 @@ If you want to run code and generate ranked leads, start with LV3:
 ## Recommended GitHub "About" description
 
 Theory + validation blueprint (LV4) for the Ancient Semitic Root Hypothesis, built on LV3 similarity scoring and ranked lead discovery.
+
+## Next Steps
+
+- Read `docs/README.md`
+- Follow the ordered plan in `docs/ROADMAP.md`
