@@ -5,7 +5,6 @@ LV4 is the **theory + validation blueprint** for the broader project. It builds 
 ## Start Here
 
 - Main document (GitHub-friendly): `Master FoundationV3.2.md`
-- Source text (same content): `Master FoundationV3.2.txt`
 
 ## How LV4 relates to LV3
 
