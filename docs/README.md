@@ -16,3 +16,4 @@ This folder contains supporting documentation for the LV4 Master Foundation.
 LV3 is the runnable pipeline producing processed tables, ranked leads, and QA outputs.
 LV4 defines the constraints, policies, and validation standards applied on top of LV3 results.
 
+Practical: how to get LV3 artifacts (build vs download): `docs/GETTING_LV3_OUTPUTS.md`
