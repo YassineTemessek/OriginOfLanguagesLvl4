@@ -10,10 +10,15 @@ You have two ways to obtain them.
 
 ## Option A: Build locally (most reproducible)
 
-In the LV3 repo (`https://github.com/YassineTemessek/LinguisticComparison`):
+1) Build/fetch canonical processed data via LV0 (data core):
 
-- `python scripts/ingest/run_ingest_all.py --require-inputs --fail-fast`
-- `python scripts/ingest/validate_processed.py --all --require-files`
+- LV0 repo: `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- Build: `ldc ingest --all`
+- Validate: `ldc validate --all --require-files`
+
+2) Run LV3 discovery:
+
+- LV3 repo: `https://github.com/YassineTemessek/LinguisticComparison`
 - `python scripts/discovery/run_discovery_retrieval.py --source ... --target ...` (SONAR/CANINE retrieval + hybrid scoring)
 - Optional legacy matcher: `python scripts/discovery/run_full_matching_pipeline.py`
 
@@ -23,10 +28,10 @@ Note: SONAR/CANINE runs require the optional LV3 dependencies (`requirements.emb
 
 ## Option B: Download maintainer-published processed bundles (fastest)
 
-If maintainers publish a Release asset zip (recommended for big files):
+If maintainers publish LV0 per-language bundles (recommended for big files):
 
-- In LV3: `python scripts/ingest/fetch_processed_release.py`
+- Install LV0 package (editable) and fetch: `ldc fetch --release latest --dest <your LV3 repo root>`
 
-This downloads `processed_canonicals.zip` from the latest GitHub Release and extracts it into the LV3 repo, creating `data/processed/...`.
+This extracts into the destination, creating `data/processed/...`.
 
 See LV3: `docs/RELEASE_ASSETS.md`.
