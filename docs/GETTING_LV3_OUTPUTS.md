@@ -19,6 +19,8 @@ In the LV3 repo (`https://github.com/YassineTemessek/LinguisticComparison`):
 
 LV3 writes run manifests, caches, and outputs under `outputs/`.
 
+Note: SONAR/CANINE runs require the optional LV3 dependencies (`requirements.embeddings.txt`) and will download model weights on first use.
+
 ## Option B: Download maintainer-published processed bundles (fastest)
 
 If maintainers publish a Release asset zip (recommended for big files):

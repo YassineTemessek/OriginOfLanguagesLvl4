@@ -71,6 +71,13 @@ Key LV3 entrypoints:
 - Run discovery retrieval + hybrid scoring (recommended): `python "scripts/discovery/run_discovery_retrieval.py" --source ... --target ...`
 - Optional legacy matcher: `python "scripts/discovery/run_full_matching_pipeline.py"`
 
+LV3 discovery technologies (current):
+
+- **SONAR (Meta)**: multilingual semantic similarity (meaning) in a shared embedding space.
+- **CANINE (Google)**: character-level similarity (form) over raw Unicode.
+- **Hybrid scoring (LV3)**: after retrieval, compute additional rough component scores (orthography / IPA / skeleton) and a combined exploratory score for ranking.
+- **MMS (Meta, optional later)**: speech-centric representation for phonetic similarity and audio rendering; treated as an extra signal, not evidence by itself.
+
 LV4 uses LV3 outputs as the discovery corpus and then applies stricter constraints (anchors, chronology, null models) in the Validation Track.
 
 ## 1. Core Principles
@@ -84,7 +91,7 @@ No Proto reconstructions counted as data (they may be cited in notes).
 Brute-filled lemma anchors are allowed for UI & exploratory navigation but explicitly tagged.
 
 Multi-view evidence.
-Compare Consonantal Skeletons, Orthographic Root Traces (ORT), and Articulatory-Sonority profiles.
+Compare semantic similarity (SONAR), form similarity (CANINE), and classic views like consonantal skeletons / ORT-like traces / IPA-driven signals when available.
 
 Transparent provenance.
 Every form carries stage, script, date window, source, and now lemma_status & lemma_source.
@@ -454,47 +461,30 @@ Cluster memory: kn-, gn-, wr-, ps-, pt-, mn- persist in spelling after phonetic 
 ## 9. Rapid Candidate Generation (RCG) Pipeline
 
 
-Ingest & Normalize
-Transliteration + IPA; generate Skeleton / ORT / Sonority; tag provenance and lemma anchor fields.
+Ingest & Normalize (LV3)
 
-Multi-view neighbor search
+- Convert raw sources into canonical `data/processed/...` tables.
+- Preserve provenance and stage/script labels.
+- When present, keep `ipa`/`ipa_raw` and transliteration fields for later scoring.
 
-LSH over consonant shingles (skeleton)
+Retrieval-first discovery (LV3)
 
-BK-trees for consonant-sequence edit distance
+- **SONAR retrieval**: semantic similarity across languages (meaning neighbors).
+- **CANINE retrieval**: character-level similarity across scripts (form neighbors).
+- Candidates are the union of SONAR and CANINE top‑K lists (high recall).
 
-Cosine over articulatory vectors
+Hybrid scoring (LV3, exploratory)
 
-ORT fingerprints (grapheme n-grams, digraphs, fossils)
-
-Soft semantic gating
-
-Map to concept rings; embed dictionary glosses (not noisy corpora).
-
-Optional expansion radii (synset / meronym / figurative) with penalties.
-
-Lead scoring (exploratory)
-
-DiscoveryScore (0-10) = w1*Skeleton (0-3) + w2*Articulatory (0-3) + w3*ORT (0-2) + w4*Semantics (0-2) + Corridor bonus (cap +2)
-
-LV3 scoring alignment (implementation):
-orthography_score captures spelling/shape (including skeleton + ORT-like signals).
-sound_score captures phonetic similarity (IPA-driven).
-combined_score = w_sound*sound_score + w_orth*orthography_score (configurable per run).
-
-Expansion penalties:
-
-Radius-1: -10% semantics, -0.2 composite
-
-Radius-2: -25% semantics, -0.5 composite + figurative tag
+- Compute additional rough component scores on retrieved pairs:
+  - orthography (n-grams + string ratio; prefers translit if available)
+  - sound (IPA similarity when present)
+  - skeleton (consonant skeleton similarity)
+- Produce an exploratory combined score used for ranking and inspection.
 
 Triaging & Tagging
 
-Tags: guttural, liquid, spirant, cluster_echo, aspiration, palatal, labial, glottal, nasal, areal_possible, loan_flag, chronology_note, plus e.g. lemma_status_lat.
-
-Lead Bank
-
-Nothing deleted; low-score leads are parked, not pruned.
+- Keep discovery tags soft: corridor hints, script/stage notes, loan flags, chronology notes, lemma_status_* fields.
+- Nothing deleted; low-score leads are parked, not pruned.
 
 ### 9.7 Brute Lemma Layer (New in v3.2)
 
