@@ -12,19 +12,19 @@ You have two ways to obtain them.
 
 In the LV3 repo (`https://github.com/YassineTemessek/LinguisticComparison`):
 
-- `python OpenAI/scripts/run_ingest_all.py --require-inputs --fail-fast`
-- `python OpenAI/scripts/validate_processed.py --all --require-files`
-- `python Gemini/scripts/run_full_matching_pipeline.py`
+- `python scripts/ingest/run_ingest_all.py --require-inputs --fail-fast`
+- `python scripts/ingest/validate_processed.py --all --require-files`
+- `python scripts/discovery/run_discovery_retrieval.py --source ... --target ...` (SONAR/CANINE retrieval + hybrid scoring)
+- Optional legacy matcher: `python scripts/discovery/run_full_matching_pipeline.py`
 
-LV3 writes run manifests and outputs under `OpenAI/output/` and `Gemini/output/`.
+LV3 writes run manifests, caches, and outputs under `outputs/`.
 
 ## Option B: Download maintainer-published processed bundles (fastest)
 
 If maintainers publish a Release asset zip (recommended for big files):
 
-- In LV3: `python OpenAI/scripts/fetch_processed_release.py`
+- In LV3: `python scripts/ingest/fetch_processed_release.py`
 
 This downloads `processed_canonicals.zip` from the latest GitHub Release and extracts it into the LV3 repo, creating `data/processed/...`.
 
 See LV3: `docs/RELEASE_ASSETS.md`.
-

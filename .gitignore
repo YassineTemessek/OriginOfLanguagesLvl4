@@ -14,10 +14,8 @@ __pycache__/
 venv/
 
 # Local outputs (if any scripts are run inside this repo)
-OpenAI/output/
-Gemini/output/
+outputs/
 data/
 
 # Backups
 *.original.txt
-

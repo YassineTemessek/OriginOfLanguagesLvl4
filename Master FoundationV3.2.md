@@ -62,13 +62,14 @@ The runnable discovery pipeline lives in LV3: `C:/AI Projects/LinguisticComparis
 
 LV3 produces (local, not committed by default):
 - Canonical processed lexeme tables: `data/processed/...`
-- Ranked leads + QA artifacts: `Gemini/output/` and `OpenAI/output/`
-- Run manifests (what ran, outputs present): `OpenAI/output/manifests/`
+- Ranked leads + QA artifacts: `outputs/`
+- Run manifests (what ran, outputs present): `outputs/manifests/`
 
 Key LV3 entrypoints:
-- Build/refresh processed data: `python "OpenAI/scripts/run_ingest_all.py"`
-- Validate processed outputs: `python "OpenAI/scripts/validate_processed.py" --all`
-- Run matching pipeline: `python "Gemini/scripts/run_full_matching_pipeline.py"`
+- Build/refresh processed data: `python "scripts/ingest/run_ingest_all.py"`
+- Validate processed outputs: `python "scripts/ingest/validate_processed.py" --all`
+- Run discovery retrieval + hybrid scoring (recommended): `python "scripts/discovery/run_discovery_retrieval.py" --source ... --target ...`
+- Optional legacy matcher: `python "scripts/discovery/run_full_matching_pipeline.py"`
 
 LV4 uses LV3 outputs as the discovery corpus and then applies stricter constraints (anchors, chronology, null models) in the Validation Track.
 
@@ -570,9 +571,9 @@ Implementation note:
 - `data/raw/...` inputs (local)
 - `data/processed/...` canonical tables (local)
 - `resources/...` tracked reference assets (concepts, anchors)
-- `OpenAI/scripts/...` ingest + utilities
-- `Gemini/scripts/...` matching + scoring
-- `OpenAI/output/...` and `Gemini/output/...` run artifacts (local)
+- `scripts/ingest/...` ingest + utilities
+- `scripts/discovery/...` matching + scoring
+- `outputs/...` and `outputs/...` run artifacts (local)
 
 Conceptual architecture (for LV4 planning):
 /data
