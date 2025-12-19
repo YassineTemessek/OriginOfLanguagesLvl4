@@ -1,32 +1,35 @@
-# OriginOfLanguagesLvl4 (LV4)
+# OriginOfLanguagesLvl4 (LV4) 🧪
 
-LV4 is the **theory + validation blueprint** for the broader project. It builds on LV3 outputs (ranked leads + QA) and defines how to move from discovery to stricter hypothesis testing.
+![level](https://img.shields.io/badge/level-LV4-6f42c1)
+![license](https://img.shields.io/badge/license-MIT-blue)
 
-## Start Here
+LV4 is the **theory + validation blueprint**. It builds on LV3 outputs (ranked leads + QA) and defines how to move from **discovery** to **stricter hypothesis testing**.
 
-- Main document (GitHub-friendly): `Master FoundationV3.2.md`
+## Project map 🧭
 
-## Repo Contents
+- LV0 (data core): `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- LV2 (Arabic decoding & clustering): `https://github.com/YassineTemessek/Arabic-s-Words-decoding-LV2`
+- LV3 (cross-language discovery pipeline): `https://github.com/YassineTemessek/LinguisticComparison`
+- LV4 (this repo): `https://github.com/YassineTemessek/OriginOfLanguagesLvl4`
 
-- `Master FoundationV3.2.md`: the main LV4 document (preferred).
-- `docs/`: supporting notes, templates, and an execution roadmap.
+## Start here 📌
 
-## How LV4 relates to LV3
+- Main document: `Master FoundationV3.2.md`
+- Docs navigation: `docs/README.md`
+- Ordered plan: `docs/ROADMAP.md`
 
-- LV3 (runnable pipeline): ingest + similarity scoring + ranked candidate discovery + QA reports.
-- LV4 (this repo): hypotheses, constraints, corridor catalog, anchor policy, and a validation track design.
+## What LV4 covers ✅
 
-If you want to run code and generate ranked leads, start with LV3:
-
-- `https://github.com/YassineTemessek/LinguisticComparison`
+- Hypotheses, constraints, and what counts as “evidence”
+- Anchor policy and corridor tags for interpretation
+- A validation track design that consumes LV3 artifacts
 
 To obtain the LV3 artifacts that LV4 validates, see `docs/GETTING_LV3_OUTPUTS.md`.
 
-## Recommended GitHub "About" description
+## Contact 🤝
 
-Theory + validation blueprint (LV4) for the Ancient Semitic Root Hypothesis, built on LV3 similarity scoring and ranked lead discovery.
+For collaboration: `yassine.temessek@hotmail.com`
 
-## Next Steps
+## Suggested GitHub “About” 📝
 
-- Read `docs/README.md`
-- Follow the ordered plan in `docs/ROADMAP.md`
+Theory + validation blueprint (LV4) built on LV3 ranked lead discovery and QA outputs.

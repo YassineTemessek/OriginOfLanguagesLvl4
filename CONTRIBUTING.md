@@ -2,6 +2,13 @@
 
 This repository is documentation-first: it defines the LV4 theory + validation blueprint.
 
+Project map:
+
+- LV0: `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- LV2: `https://github.com/YassineTemessek/Arabic-s-Words-decoding-LV2`
+- LV3: `https://github.com/YassineTemessek/LinguisticComparison`
+- LV4: `https://github.com/YassineTemessek/OriginOfLanguagesLvl4`
+
 ## What to change here
 
 - Improve clarity and structure in `Master FoundationV3.2.md`
@@ -22,3 +29,6 @@ This repository is documentation-first: it defines the LV4 theory + validation b
 - Do not overwrite the meaning of an existing “vX.Y” Master Foundation.
 - Create a new file for major revisions (e.g., `Master FoundationV3.3.md`) and link it from `README.md`.
 
+## Contact
+
+For collaboration: `yassine.temessek@hotmail.com`
