@@ -13,6 +13,7 @@ You have two ways to obtain them.
 1) Build/fetch canonical processed data via LV0 (data core):
 
 - LV0 repo: `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- LV0 project ReadMe: `https://github.com/YassineTemessek/LinguisticDataCore-LV0/blob/main/ReadMe.txt`
 - Build: `ldc ingest --all`
 - Validate: `ldc validate --all --require-files`
 

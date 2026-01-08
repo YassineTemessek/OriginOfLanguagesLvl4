@@ -8,6 +8,7 @@ LV4 is the **theory + validation blueprint**. It builds on LV3 outputs (ranked l
 ## Project map 🧭
 
 - LV0 (data core): `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- LV0 project ReadMe: `https://github.com/YassineTemessek/LinguisticDataCore-LV0/blob/main/ReadMe.txt`
 - LV2 (Arabic decoding & clustering): `https://github.com/YassineTemessek/Arabic-s-Words-decoding-LV2`
 - LV3 (cross-language discovery pipeline): `https://github.com/YassineTemessek/LinguisticComparison`
 - LV4 (this repo): `https://github.com/YassineTemessek/OriginOfLanguagesLvl4`
