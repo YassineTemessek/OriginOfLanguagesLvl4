@@ -5,9 +5,16 @@
 
 LV4 is the **theory + validation blueprint**. It builds on LV3 outputs (ranked leads + QA) and defines how to move from **discovery** to **stricter hypothesis testing**.
 
+
+## Role in the stack ??
+
+LV4 tests hypotheses that an older Arabic format (possibly binary roots) could be a
+source for multiple language families, using LV3 outputs as evidence inputs.
+
 ## Project map 🧭
 
 - LV0 (data core): `https://github.com/YassineTemessek/LinguisticDataCore-LV0`
+- LV1 (Quranic analysis): `https://github.com/YassineTemessek/Quran-s-Words-decoding-LV1`
 - LV0 project ReadMe: `https://github.com/YassineTemessek/LinguisticDataCore-LV0/blob/main/ReadMe.txt`
 - LV2 (Arabic decoding & clustering): `https://github.com/YassineTemessek/Arabic-s-Words-decoding-LV2`
 - LV3 (cross-language discovery pipeline): `https://github.com/YassineTemessek/LinguisticComparison`
