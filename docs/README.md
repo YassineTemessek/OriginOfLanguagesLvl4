@@ -17,3 +17,7 @@ LV3 is the runnable pipeline producing processed tables, ranked leads, and QA ou
 LV4 defines the constraints, policies, and validation standards applied on top of LV3 results.
 
 Practical: how to get LV3 artifacts (build vs download): `docs/GETTING_LV3_OUTPUTS.md`
+
+
+## Project Status & Progress
+- Project-wide progress log: docs/PROGRESS_LOG.md`n- Raw data flow (Resources -> LV0 -> processed): docs/RAW_DATA_FLOW.md`n

@@ -41,3 +41,7 @@ For collaboration: `yassine.temessek@hotmail.com`
 ## Suggested GitHub “About” 📝
 
 Theory + validation blueprint (LV4) built on LV3 ranked lead discovery and QA outputs.
+
+
+## Project Status & Progress
+- Project-wide progress log: docs/PROGRESS_LOG.md`n- Raw data flow (Resources -> LV0 -> processed): docs/RAW_DATA_FLOW.md`n
